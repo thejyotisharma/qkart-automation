@@ -1,0 +1,42 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name = "Suite1">
+    <listeners>
+        <listener class-name="QKART_TESTNG.testcases.ListenerClass"/>
+    </listeners>
+    <parameter name = "TC1_Username" value="testUser"/>
+    <parameter name = "TC1_Password" value="abc@123"/>
+   <test name = "test1">
+      <groups>
+         <run>
+            <include name = "Sanity"></include>
+            <include name = "Regression"></include>
+         </run>
+      </groups>
+      <parameter name = "TC5_ProductNameToSearchFor" value="YONEX Smash Badminton Racquet"/>
+      <parameter name = "TC5_ProductNameToSearchFor2" value="Tan Leatherette Weekender Duffle"/>
+      <parameter name = "TC5_AddressDetails" value="Addr line 1 addr Line 2 addr line 3"/>
+      <parameter name = "TC6_ProductNameToSearch1" value="Xtend Smart Watch"/>
+      <parameter name = "TC6_ProductNameToSearch2" value="Yarine Floor Lamp"/>
+      <parameter name = "TC7_ProductName" value="Stylecon 9 Seater RHS Sofa Set"/>
+      <parameter name = "TC7_Qty" value="60"/>
+      <classes>
+         <class name = "QKART_TESTNG.testcases.QKART_Tests">
+            <methods>
+               <include name="TestCase01"/>
+               <include name="TestCase02"/>
+               <include name="TestCase03"/>
+               <include name="TestCase04"/>
+               <include name="TestCase05"/>
+               <include name="TestCase06"/>
+               <include name="TestCase07"/>
+               <include name="TestCase08"/>
+               <include name="TestCase09"/>
+               <include name="TestCase10"/>
+               <include name="TestCase11"/>
+            </methods>
+         </class>
+      </classes>
+   </test>
+</suite>
